@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Grant Notice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header .title {
+            text-align: center;
+            flex: 1;
+        }
+
+        .header .title h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .title p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .header .barcode {
+            width: 100px;
+            height: 40px;
+            background: repeating-linear-gradient(
+                90deg,
+                #000 0px,
+                #000 2px,
+                #fff 2px,
+                #fff 4px
+            );
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .section .details {
+            display: flex;
+            gap: 20px;
+        }
+
+        .section .photo {
+    width: 100px;
+    height: 120px;
+}
+.section .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+}
+
+        .section .info {
+            flex: 1;
+        }
+
+        .section .info p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .section .info p span {
+            display: inline-block;
+            width: 180px;
+            font-weight: bold;
+        }
+
+        .section .visa-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .section .visa-details p {
+            font-size: 14px;
+        }
+
+        .section .visa-details p span {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+
+        .section .remarks {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+        }
+
+        .section .notice {
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .section .notice h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section .notice p {
+            margin-bottom: 10px;
+        }
+
+        .section .signature {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .section .signature .stamp {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <p>대한민국 법무부</p>
+                <p>MINISTRY OF JUSTICE, THE REPUBLIC OF KOREA</p>
+                <h1>VISA GRANT NOTICE</h1>
+                <p>비자 발급 확인서</p>
+                <p>Visa No. (사증번호): PA2200003710</p>
+                <p>2025-04-18 08:24</p>
+            </div>
+            <div class="barcode"></div>
+        </div>
+
+        <div class="section">
+            <h2>1. DETAILS OF APPLICANT 신청자정보</h2>
+            <div class="details">
+                <div class="photo">
+                    <img src="./passport-photo.jpg.jpeg" alt="">
+                </div>
+                <div class="info">
+                    <p><span>Full Name 영문성명</span>KHAN SAJID</p>
+                    <p><span>Date of Birth 출생년월일</span>02-01-1980</p>
+                    <p><span>Nationality 국적</span>PAKISTAN</p>
+                    <p><span>Passport No. 여권번호</span>CC5144504</p>
+                    <p><span>Passport Expiration Date 여권만료일</span>14-09-20</p>
+                    <p><span>Gender 성별</span>Male</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. VISA DETAILS 사증사항</h2>
+            <div class="visa-details">
+                <p><span>Status of Stay 체류자격</span>E-7</p>
+                <p><span>Period of Stay 체류기간</span>4 YEARS</p>
+                <p><span>Date of Issue 발급일</span>18-04-2025</p>
+                <p><span>Validity Period of Visa 사증유효기간</span>17-04-2029</p>
+                <p><span>Number of Entries 사증 종류</span>MULTIPLE</p>
+                <p><span>Issuing Authority 발급 기관</span>KOREA IMMIGRATION SERVICE</p>
+            </div>
+            <p class="remarks">Remarks 비고: 한국사법센터이른 주식회사</p>
+            <p>
+                THIS document confirms that the above applicant's Korean visa application has been approved and that the visa is currently valid in accordance with Article 7 (Issuance of Visa) of the Enforcement Decree of the Immigration Act.<br>
+                대韓民國 法務部는 서류심사(사증발급인정서) 및 구정에 의하여 기재된 신청인에 대하여 사증 발급이 허가되었음을 인증하는 바, 이에 인증 사증이 유효함을 확인합니다.<br>
+                Minister of Justice, Republic of KOREA<br>
+                대한민국 법무부 장관 (공인)
+            </p>
+            <div class="signature">
+                <p class="stamp">[Official Stamp]</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><NOTICE 주의사항></h2>
+            <div class="notice">
+                <h3>1.</h3>
+                <p>
+                    This document is a proof that a valid visa of the Republic of Korea (ROK) has been issued to the above applicant. The holder of this document may use it as an official proof to verify the validity of the ROK visa, even without a visa stamp on the passport.
+                </p>
+                <h3>2.</h3>
+                <p>
+                    The holder of this document can enter the ROK within the validity period of the visa stipulated in the above KOREA VISA PORTAL web-site (www.visa.go.kr). The validity period of the visa can be verified on the KOREA VISA PORTAL web-site (www.visa.go.kr).
+                </p>
+                <h3>3.</h3>
+                <p>
+                    The holder of this document may enter the ROK within the validity period of the visa, and may stay during the Period of Stay. Nevertheless, a visa holder may be denied entry into the ROK in the process of immigration inspection, and the Period of Stay can be changed by immigration authorities in accordance with the Immigration Act.
+                </p>
+                <h3>4.</h3>
+                <p>
+                    Forging or falsifying of this document, or stating false information to obtain this document, is strictly prohibited and may result in punishment under the relevant laws and regulations of the ROK.
+                </p>
+                <h3>5.</h3>
+                <p>
+                    In case the passport information (Passport Number, Date of Expiry, etc.) indicated in this document changes, applicants are required to visit the Consular Offices of the ROK to report the changes and have a visa re-issued.
+                </p>
+                <p>
+                    ENTRY MAY BE DENIED SHOULD THE PASSPORT INFORMATION ON THIS DOCUMENT DIFFER FROM THAT SHOWN ON THE APPLICANT'S PASSPORT.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

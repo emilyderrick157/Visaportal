@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Status Inquiry - Visa Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .notice {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .header .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header .nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .header .nav a.active {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .breadcrumb {
+            background-color: #f9f9f9;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .main-content h1 {
+            color: #d32f2f;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .main-content p strong {
+            color: #d32f2f;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section .form-group {
+            margin-bottom: 15px;
+        }
+
+        .section .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .section .form-group select,
+        .section .form-group input {
+            width: 100%;
+            max-width: 300px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .section .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .section .form-group .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .section .form-group .note {
+            font-size: 12px;
+            color: #d32f2f;
+            margin-top: 5px;
+        }
+
+        .section .search-btn {
+            background-color: #1976d2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .section .search-btn:hover {
+            background-color: #1565c0;
+        }
+
+        .passport-sample {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .passport-sample img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="notice">
+            This website is the official e-government website of KOREA.
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Sitemap</a>
+            <a href="#" class="active">ENGLISH</a>
+            <a href="#">中文</a>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <a href="#">VISA guide</a> > <a href="#">Application</a> > <a href="#" class="active">Progress issuance</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Progress status inquiry and output</h1>
+        <p>
+            PLEASE select the item you applied for from the overseas mission, electronic visa, group visa, and visa issuance certif.,<br>
+            You must enter your application number, passport number, or application number, <strong>Full name, and date of birth</strong> to inquire.
+        </p>
+
+        <div class="section">
+            <h2>Inquiry</h2>
+            <form id="inquiry-form">
+                <div class="form-group">
+                    <label>Application type</label>
+                    <select name="application-type">
+                        <option>Overseas Mission Electronic Visa (Individual) Electronic Visa (Group) Visa Issuance Certification Center Visa-free</option>
+                        <option>Individual Visa</option>
+                        <option>Group Visa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Classification</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="classification" value="passport" checked> Passport number</label>
+                        <label><input type="radio" name="classification" value="application"> Application number</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>FULL NAME</label>
+                    <input type="text" name="english-name" placeholder="Enter your Full Name">
+                    <div class="note">Please enter your Full name on your passport.</div>
+                </div>
+                <div class="form-group">
+                    <label>YEAR OF BIRTH</label>
+                    <input type="text" name="year-of-birth" placeholder="YYYY">
+                </div>
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Precautions when entering Full name</h2>
+            <p>
+                PLEASE enter your Full name based on the machine identification reading part at the bottom of the person side of the passport submitted at the time of application.
+            </p>
+            <div class="passport-sample">
+                <img src="https://via.placeholder.com/600x400?text=Passport+Sample" alt="Passport Sample">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="#">TERMS OF USE</a> | <a href="#">PRIVACY POLICY</a> | <a href="#">Copyright policy</a> | <a href="#">Refusal of unauthorized collection of emails</a> | <a href="#">Customer Center</a><br>
+            ADDRESS: Gwacheon Office BUILDING 1, 47 Gwan-ro, Gwacheon-si, Gyeonggi-do (Gwacheon General Government Complex)<br>
+            1345 WITHOUT AREA CODE<br>
+            ⓒ MINISTRY OF JUSTICE, REPUBLIC OF KOREA, ALL RIGHT RESERVED.
+        </p>
+        <p>
+            Visa Portal is optimized for IE 7 or later, Chrome, Firefox, Safari, Opera browser and 1024*768 screen.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('inquiry-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const englishName = document.querySelector('input[name="english-name"]').value.trim();
+            const yearOfBirth = document.querySelector('input[name="year-of-birth"]').value.trim();
+
+            if (!englishName || !yearOfBirth) {
+                alert('Please fill in both the English name and year of birth.');
+                return;
+            }
+
+            if (!/^\d{4}$/.test(yearOfBirth)) {
+                alert('Please enter a valid year of birth (YYYY format).');
+                return;
+            }
+
+            window.location.href = 'visa-grant-notice.html';
+        });
+    </script>
+</body>
+</html>
